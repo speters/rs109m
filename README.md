@@ -1,7 +1,7 @@
 # RS-109M AIS Net Locator AIS buoy info
 
 This repo contains info about the RS-109M Net Locator AIS buoy.
-The device is sold by [Socotron](http://web.archive.org/web/20210806132018/https://socotran.com/products/fishing-net-tracker-locator-gps-marine-ais-netsonde-net-sonde-for-boating-rs-109m) and is also available on Ali*xpress and e*ay.
+The device is sold by [Socotron](http://web.archive.org/web/20210806132018/https://socotran.com/products/fishing-net-tracker-locator-gps-marine-ais-netsonde-net-sonde-for-boating-rs-109m) and is also available on Ali\*xpress and e\*ay.
 
 [![buoy complete](images/buoy_800px.jpg)](images/buoy.jpg)
 
@@ -28,7 +28,7 @@ It is a Qt application compiled for Windows. I could get it to start with Wine 6
 
 ![programming software screenshot](images/pcsw17_screenshot_en.png)
 
-Using the software an a Windows VM, I was able to produce some [logs](logs/) to get knowledge of the serial protocol.
+Using the software on a Windows VM, I was able to produce some [logs](logs/) to get knowledge of the serial protocol.
 
 ## Configuration protocol
 
