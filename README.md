@@ -56,3 +56,13 @@ After init, you can do 3 things:
  * set/clear password
 
 Config is done as a whole block of data with some values stuffed together to save some space.
+
+## Hardware
+
+Buoy is built around Si4463 radio.
+
+Microprocessor matches the layout of uniquitous STM32F103C8, but as it has no markings, it could as well be a clone or different STM32 ARM µC.
+
+GPS module is ATGM332D with GPS and BDS/BeiDou support, but no GLONASS. It seems to be tied only with its TX pin to an RX pin of the µC.
+
+See [MAIANA AIS project](https://github.com/peterantypas/maiana) for a far more capable Open Source board.
