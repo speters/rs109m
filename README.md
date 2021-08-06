@@ -7,7 +7,7 @@ The device is sold by [Socotron](http://web.archive.org/web/20210806132018/https
 
 Information was gathered by personal observations like photographs of the PCB, and logging of the data stream while configuring.
 
-# Attention
+## Attention
 
 It is questionable if this device could be operated as a proper ("valid", "legal") AIS device!
 
