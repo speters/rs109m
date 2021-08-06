@@ -38,6 +38,8 @@ It is a Qt application compiled for Windows. I could get it to start with Wine 6
 
 Using the software on a Windows VM, I was able to produce some [logs](logs/) to get knowledge of the serial protocol.
 
+"Production mode" seems to do nothing more than incrementing MMSI number on subsequent writes.
+
 ## Configuration protocol
 
 See [logs dir](logs/) for data I obtained while doing tiny configuration changes.
