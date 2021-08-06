@@ -61,7 +61,7 @@ Config is done as a whole block of data with some values stuffed together to sav
 
 Buoy is built around Si4463 radio.
 
-Microprocessor matches the layout of uniquitous STM32F103C8, but as it has no markings, it could as well be a clone or different STM32 ARM µC.
+Microprocessor matches the layout of ubiquitous STM32F103C8, but as it has no markings, it could as well be a clone or different STM32 ARM µC.
 A SWDIO debug port is available on the PCB (marked G=ground, C=clock, D=swdio, V=VCC), but did not check.
 
 GPS module is ATGM332D with GPS and BDS/BeiDou support, but no GLONASS. It seems to be tied only with its TX pin to an RX pin of the µC.
