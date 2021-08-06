@@ -1,0 +1,11 @@
+ * Clear Password (no password set)
+
+[06/08/2021 00:11:47] - Open port ttyUSB0 (RS_10xM_SETTING.exe)
+
+[06/08/2021 00:11:47] Written data (ttyUSB0)
+    59 02 42 06 30 30 30 30 30 30                     Y.B.000000
+[06/08/2021 00:11:47] Read data (ttyUSB0)
+    95 20                                             •
+[06/08/2021 00:11:47] - Close port ttyUSB0
+
+

@@ -1,0 +1,13 @@
+MMSI: 109040175
+Name: BLAH
+TX_Timer: 4min
+ShipAndCargo: 1
+CallSign: AZ01234
+VendorID: BYY
+VendorMode: 0
+VendorNum: 0
+ReferencePoint_A: 69
+ReferencePoint_B: 10
+ReferencePoint_C: 2
+ReferencePoint_D: 2
+
