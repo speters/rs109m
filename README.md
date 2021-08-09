@@ -115,4 +115,6 @@ A SWDIO debug port is available on the PCB (marked G=ground, C=clock, D=swdio, V
 
 GPS module is ATGM332D with GPS and BDS/BeiDou support, but no GLONASS. It seems to be tied only with its TX pin to an RX pin of the µC.
 
+[Adrain Studer did also some investigations](https://mobile.twitter.com/AdiStuder/status/1380290819056304130) and posted a [pcb photo](http://web.archive.org/web/20210809180746/https://pbs.twimg.com/media/Ex3FZafUcAIMJLL?format=jpg&name=4096x4096).
+
 See [MAIANA AIS project](https://github.com/peterantypas/maiana) for a far more capable Open Source board.
