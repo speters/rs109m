@@ -104,6 +104,8 @@ Original software always reads/writes 0x40 bytes, but there is possibility to ac
 When supplying an "update" command without actually delivering any data, there seems to be a glitch leading to contents from an unknown memory region being stored in config space.
 This can be restored by simply copying default memory contents (0xff length) again.
 
+It looks like the battery voltage is sent as 1/10V in place of the Reference A value.
+
 ## Hardware
 
 Buoy is built around Si4463 radio.
