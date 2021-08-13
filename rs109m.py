@@ -183,12 +183,12 @@ class RS109_config:
 
     def get_callsign(self):
         # TODO: check if it is 32:37 or 32:38
-        s = fromxbit(self._config[32:38], 6, True).decode('ascii')[::-1]
+        s = fromxbit(self._config[32:37], 6, True).decode('ascii')[::-1]
         return ''.join(c if c.isalnum() else '' for c in s)
 
     def set_callsign(self, cs):
         safe_cs = ''.join(c if c.isalnum() else '' for c in cs)
-        self._config[32:38] = toxbit(safe_cs[::-1])
+        self._config[32:37] = toxbit(safe_cs[::-1])
 
     callsign = property(get_callsign, set_callsign)
 
