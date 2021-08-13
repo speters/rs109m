@@ -87,7 +87,7 @@ class RS109_config:
             self._config = self.default_config
         else:
             clen = 0xff if (len(config) > 0xff) else len(config)
-            self._config = config[0:clen] + self.default_config[clen:]
+            self._config = bytearray(config[0:clen] + self.default_config[clen:])
 
     config = property(get_config, set_config)
 
@@ -122,6 +122,7 @@ class RS109_config:
         return self._config[0] * 30
 
     def set_interval(self, seconds):
+        seconds = int(seconds)
         if seconds > 600:
             seconds = 600
         if seconds < 30:
