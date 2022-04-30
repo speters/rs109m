@@ -2,7 +2,7 @@
 
 This repo is contains a [config tool](rs109m.py) and some info about the [RS-109M](https://opcenter.de/pub/Boot/RS_109M_manual.pdf) Net Locator AIS buoy.
 
-The device is sold by [Socotron](http://web.archive.org/web/20210806132018/https://socotran.com/products/fishing-net-tracker-locator-gps-marine-ais-netsonde-net-sonde-for-boating-rs-109m) and is also available on Ali\*xpress and e\*ay. In the UK, it is also sold by [East Anglian Radio](http://web.archive.org/web/20210806152420/https://www.eastanglianradio.com/rs-109-ais.html).
+The device is sold by [Socotran](http://web.archive.org/web/20210806132018/https://socotran.com/products/fishing-net-tracker-locator-gps-marine-ais-netsonde-net-sonde-for-boating-rs-109m) and is also available on Ali\*xpress and e\*ay. In the UK, it is also sold by [East Anglian Radio](http://web.archive.org/web/20210806152420/https://www.eastanglianradio.com/rs-109-ais.html).
 
 [![buoy complete](images/buoy_800px.jpg)](images/buoy.jpg)
 
