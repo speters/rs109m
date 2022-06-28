@@ -105,6 +105,7 @@ When supplying an "update" command without actually delivering any data, there s
 This can be restored by simply copying default memory contents (0xff length) again.
 
 It looks like the battery voltage is sent as 1/10V in place of the Reference A value.
+Battery voltage is measured via a voltage divider (43k/56k or 47k/56k - can not measure exactly due to small part size) on PB1 (pin 19) of the STM32F103.
 
 ## Hardware
 
