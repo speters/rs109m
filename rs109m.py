@@ -27,7 +27,7 @@ def toxbit(ba, x = 6, digitalphaencoding = True):
     if ((x < 1) or (x > 7)):
         raise ValueError("BitLen must between 1 and 7")
     if len(ba) < 1:
-        raise ValueError("Must supply non-empty array")
+        return [0xff, 0xff, 0xff, 0xff, 0xff, 0xff]
 
     if digitalphaencoding:
        ba = bytearray(ba.encode('ascii', 'ignore').decode().upper().encode('ascii'))
