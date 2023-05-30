@@ -92,7 +92,7 @@ class RS109_config:
     config = property(get_config, set_config)
 
     def get_mmsi(self):
-        mmsi = self._config[1] + (self._config[2]<<8) + (self._config[3]<<16) + ((self._config[4]&0x0f)<<24)
+        mmsi = self._config[1] + (self._config[2]<<8) + (self._config[3]<<16) + ((self._config[4]&0xff)<<24)
         return mmsi
 
     def set_mmsi(self, mmsi):
@@ -100,7 +100,7 @@ class RS109_config:
         self._config[1] = mmsi & 0xff
         self._config[2] = (mmsi >> 8) & 0xff
         self._config[3] = (mmsi >> 16) & 0xff
-        self._config[4] = (mmsi >> 24) & 0x0f
+        self._config[4] = (mmsi >> 24) & 0xff
 
     mmsi = property(get_mmsi, set_mmsi)
 
