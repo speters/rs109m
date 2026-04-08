@@ -1,0 +1,154 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 13px; }
+
+body {
+    font-family: -apple-system, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    background: #c0c0c0;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.window {
+    background: #d4d0c8;
+    border: 2px outset #fff;
+    width: fit-content;
+    min-width: 36rem;
+    padding: 0.6rem;
+}
+
+.titlebar {
+    background: linear-gradient(to right, #08246b, #a6caf0);
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.92rem;
+}
+
+fieldset {
+    border: 1px solid #808080;
+    padding: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+legend {
+    font-size: 0.92rem;
+    padding: 0 0.3rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.row label {
+    width: 8.5rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    font-size: 0.92rem;
+    flex-shrink: 0;
+}
+
+.row input, .row select {
+    flex: 1;
+    min-width: 5rem;
+}
+
+input[type="text"], input[type="number"], input[type="password"] {
+    border: 2px inset #fff;
+    background: white;
+    padding: 0.15rem 0.3rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+}
+
+input[readonly] {
+    background: #d4d0c8;
+}
+
+select {
+    border: 2px inset #fff;
+    font-family: inherit;
+    font-size: 0.92rem;
+    padding: 0.08rem;
+}
+
+button {
+    border: 2px outset #fff;
+    background: #d4d0c8;
+    padding: 0.25rem 1rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    cursor: pointer;
+    min-width: 5.5rem;
+}
+
+button:active { border-style: inset; }
+button:disabled { color: #808080; cursor: default; }
+
+.columns {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.columns > * { flex: 1; min-width: 0; }
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+}
+
+.hint {
+    font-size: 0.77rem;
+    color: #666;
+    margin-left: 0.3rem;
+    white-space: nowrap;
+}
+
+.progress-bar {
+    background: #d4d0c8;
+    border: 2px inset #fff;
+    height: 1.2rem;
+    margin-top: 0.6rem;
+}
+
+.progress-bar .fill {
+    background: #000080;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
+}
+
+#status {
+    font-size: 0.85rem;
+    padding: 0.3rem;
+    min-height: 1.4rem;
+}
+
+#status.error { color: #c00; }
+
+#hex-dump {
+    font-family: monospace;
+    font-size: 0.77rem;
+    word-break: break-all;
+    padding: 0.3rem;
+    background: #fff;
+    border: 1px inset #808080;
+    margin-top: 0.3rem;
+    min-height: 2.2rem;
+    max-height: 4.3rem;
+    overflow-y: auto;
+}
+
+.psw-buttons {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}

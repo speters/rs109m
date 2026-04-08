@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS-109M Net Locator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="window">
+    <div class="titlebar">RS-109M Net Locator Web Configurator</div>
+
+    <div class="columns">
+        <fieldset>
+            <legend>Basic information</legend>
+            <div class="row">
+                <label for="mmsi">MMSI:</label>
+                <input type="text" id="mmsi" maxlength="9" pattern="[0-9]*">
+            </div>
+            <div class="row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" maxlength="20">
+            </div>
+            <div class="row">
+                <label for="tx-timer">TX Timer:</label>
+                <select id="tx-timer">
+                    <option value="30">30s</option>
+                    <option value="60">1min</option>
+                    <option value="90">1m30s</option>
+                    <option value="120">2min</option>
+                    <option value="150">2m30s</option>
+                    <option value="180">3min</option>
+                    <option value="210">3m30s</option>
+                    <option value="240">4min</option>
+                    <option value="270">4m30s</option>
+                    <option value="300">5min</option>
+                    <option value="330">5m30s</option>
+                    <option value="360">6min</option>
+                    <option value="390">6m30s</option>
+                    <option value="420">7min</option>
+                    <option value="450">7m30s</option>
+                    <option value="480">8min</option>
+                    <option value="510">8m30s</option>
+                    <option value="540">9min</option>
+                    <option value="570">9m30s</option>
+                    <option value="600">10min</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Password Config</legend>
+            <div class="row">
+                <label for="old-psw">Old PSW:</label>
+                <input type="password" id="old-psw" maxlength="6" pattern="[0-9]*" placeholder="000000">
+            </div>
+            <div class="row">
+                <label for="new-psw">New PSW:</label>
+                <input type="password" id="new-psw" maxlength="6" pattern="[0-9]*">
+            </div>
+            <div class="row">
+                <label for="new-psw2">New PSW2:</label>
+                <input type="password" id="new-psw2" maxlength="6" pattern="[0-9]*">
+            </div>
+            <div class="psw-buttons">
+                <button id="btn-set-psw" disabled>Set PSW</button>
+                <button id="btn-clr-psw" disabled>CLR PSW</button>
+            </div>
+        </fieldset>
+    </div>
+
+    <fieldset>
+        <legend>Extended information</legend>
+        <div class="columns">
+            <div>
+                <div class="row">
+                    <label for="ship-type">ShipAndCargo:</label>
+                    <select id="ship-type"></select>
+                </div>
+                <div class="row">
+                    <label for="callsign">CallSign:</label>
+                    <input type="text" id="callsign" maxlength="7">
+                </div>
+                <div class="row">
+                    <label for="vendor-id">VendorId:</label>
+                    <input type="text" id="vendor-id" maxlength="3">
+                </div>
+                <div class="row">
+                    <label for="unit-model">VendorMode:</label>
+                    <select id="unit-model"></select>
+                </div>
+                <div class="row">
+                    <label for="unit-serial">VendorNum:</label>
+                    <input type="number" id="unit-serial" min="0" max="1048575">
+                    <span class="hint" id="serial-hint"></span>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <label for="ref-a">Ref point A(m):</label>
+                    <input type="number" id="ref-a" min="0" max="511">
+                    <span class="hint" id="battery-hint"></span>
+                </div>
+                <div class="row">
+                    <label for="ref-b">Ref point B(m):</label>
+                    <input type="number" id="ref-b" min="0" max="511">
+                </div>
+                <div class="row">
+                    <label for="ref-c">Ref point C(m):</label>
+                    <input type="number" id="ref-c" min="0" max="63">
+                </div>
+                <div class="row">
+                    <label for="ref-d">Ref point D(m):</label>
+                    <input type="number" id="ref-d" min="0" max="63">
+                </div>
+                <div class="row">
+                    <label for="ship-length">Length(A+B)(m):</label>
+                    <input type="text" id="ship-length" readonly>
+                </div>
+                <div class="row">
+                    <label for="ship-width">Width(C+D)(m):</label>
+                    <input type="text" id="ship-width" readonly>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <div id="hex-dump"></div>
+
+    <div class="progress-bar"><div class="fill" id="progress"></div></div>
+    <div id="status">Ready</div>
+
+    <div class="actions">
+        <button id="btn-connect">Connect</button>
+        <button id="btn-read" disabled>Read</button>
+        <button id="btn-write" disabled>Write</button>
+    </div>
+</div>
+
+<script type="module">
+    // Populate ship type dropdown (0-255)
+    const shipType = document.getElementById('ship-type');
+    for (let i = 0; i < 256; i++) shipType.add(new Option(i, i));
+
+    // Populate unit model dropdown (0-15)
+    const unitModel = document.getElementById('unit-model');
+    for (let i = 0; i < 16; i++) unitModel.add(new Option(i, i));
+</script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
